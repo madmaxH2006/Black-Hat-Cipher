@@ -1,0 +1,122 @@
+body {
+    background-color: #000;
+    color: #00ff00; /* Bright green text */
+    font-family: 'VT323', monospace; /* Pixelated, retro font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    animation: flicker 0.05s infinite alternate;
+}
+
+@keyframes flicker {
+    from { opacity: 0.95; }
+    to { opacity: 1; }
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    border: 2px solid #00ff00;
+    padding: 20px;
+    box-shadow: 0 0 20px #00ff00;
+    background-color: rgba(0, 20, 0, 0.8);
+}
+
+.header pre {
+    color: #ff0000; /* Red ASCII art */
+    text-shadow: 0 0 5px #ff0000;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.subtitle {
+    text-align: center;
+    color: #ffffff;
+    margin-top: -10px;
+}
+
+.cipher-form .form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 20px);
+    background-color: #0d0d0d;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 10px;
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+    resize: vertical;
+}
+
+textarea:focus, input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    padding: 10px 20px;
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00ff00;
+    color: #000;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+.encrypt-btn {
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.decrypt-btn {
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+.decrypt-btn:hover {
+    background-color: #ff0000;
+    color: #000;
+    box-shadow: 0 0 15px #ff0000;
+}
+
+.result-box {
+    margin-top: 20px;
+}
+
+.result-box textarea {
+    height: 100px;
+    background-color: #0d0d0d;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px dashed #00ff00;
+    padding-top: 10px;
+    color: #ff0000;
+}

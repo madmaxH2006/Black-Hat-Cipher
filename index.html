@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Black Hat Cipher ::</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <pre>
+██████╗ ██╗      █████╗  ██████╗██╗  ██╗███████╗██████╗ 
+██╔══██╗██║     ██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+██████╔╝██║     ███████║██║     ██████╔╝ █████╗  ██████╔╝
+██╔══██╗██║     ██╔══██║██║     ██╔══██╗ ██╔══╝  ██╔══██╗
+██████╔╝███████╗██║  ██║╚██████╗██║  ██║███████╗██║  ██║
+╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+            </pre>
+            <p class="subtitle">> A simple substitution cipher terminal</p>
+        </div>
+
+        <form method="POST" class="cipher-form">
+            <div class="form-group">
+                <label for="message">> Enter Target Data Stream (Message):</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="shift">> Enter Shift Key:</label>
+                <input type="text" id="shift" name="shift" required pattern="\d+">
+            </div>
+            <div class="buttons">
+                <button type="submit" name="encrypt" class="btn encrypt-btn">:: Encrypt ::</button>
+                <button type="submit" name="decrypt" class="btn decrypt-btn">:: Decrypt ::</button>
+            </div>
+        </form>
+
+        {% if processed_text %}
+        <div class="result-box">
+            <label>> Processed Output:</label>
+            <textarea readonly>{{ processed_text }}</textarea>
+        </div>
+        {% endif %}
+
+        <div class="footer">
+            <p>STATUS: CONNECTION SECURE | LETHALITY: HIGH</p>
+        </div>
+    </div>
+</body>
+</html>
